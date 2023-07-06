@@ -1,7 +1,8 @@
-const { User } = require('../models');
+const { User }= require('../models/index');
 
 const userController = {
   getAllUsers(req, res) {
+    console.log('information:')
     User.find({})
       .populate([
         {
