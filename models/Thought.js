@@ -54,7 +54,7 @@ const thoughtSchema = new Schema(
 );
 ;
 
-thoughtSchema.virtual('reactionCt').get(function 90 {
+thoughtSchema.virtual('reactionCt').get(function () {
   return this.reaction.length
 })
 
