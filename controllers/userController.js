@@ -1,4 +1,5 @@
 const { User }= require('../models/index');
+const { Thought } = require('../models/index');
 
 const userController = {
   getAllUsers(req, res) {
@@ -68,7 +69,7 @@ const userController = {
 
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
-      .then((userData) => {
+      .then(userData => {
         if (!userData) {
           res.status(404).json({ message: 'No user found with this id' });
         }

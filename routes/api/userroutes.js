@@ -13,7 +13,7 @@ router.route('/')
   .get(getAllUsers)
   .post(createUser);
 
-router.route('/:userId')
+router.route('/:id')
   .get(getUserById)
   .put(updateUser)
   .delete(deleteUser);
